@@ -19,7 +19,7 @@ public class Car {
         return position;
     }
 
-    public void move(int randomValue) {
+    public void move() {
         if (moveStrategy.canMove()) {
             position++;
         }
