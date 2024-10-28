@@ -15,8 +15,8 @@ public class MoveController {
 
     public void executeRounds(int rounds) {
         for (int i = 0; i < rounds; i++) {
-            GameRound round = new GameRound(cars); // 각 라운드에 대해 GameRound 생성
-            round.playRound(); // GameRound에서 playRound 실행
+            GameRound round = new GameRound(cars);
+            round.playRound();
             OutputView.printRoundResult(cars);
         }
     }
