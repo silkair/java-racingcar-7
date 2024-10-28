@@ -1,15 +1,12 @@
 package racingcar.controller;
 
-import racingcar.model.Car;
-import racingcar.model.RacingGame;
+import racingcar.model.RaceWinner;
 import racingcar.view.OutputView;
 
-import java.util.List;
-
 public class MoveController {
-    private final RacingGame racingGame;
+    private final RaceWinner racingGame;
 
-    public MoveController(RacingGame racingGame) {
+    public MoveController(RaceWinner racingGame) {
         this.racingGame = racingGame;
     }
 

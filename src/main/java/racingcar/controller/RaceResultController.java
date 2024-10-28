@@ -1,15 +1,15 @@
 package racingcar.controller;
 
 import racingcar.model.Car;
-import racingcar.model.RacingGame;
+import racingcar.model.RaceWinner;
 import racingcar.view.OutputView;
 
 import java.util.List;
 
 public class RaceResultController {
-    private final RacingGame racingGame;
+    private final RaceWinner racingGame;
 
-    public RaceResultController(RacingGame racingGame) {
+    public RaceResultController(RaceWinner racingGame) {
         this.racingGame = racingGame;
     }
 

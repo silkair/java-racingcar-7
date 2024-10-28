@@ -1,7 +1,7 @@
 package racingcar.controller;
 
 import racingcar.model.Car;
-import racingcar.model.RacingGame;
+import racingcar.model.RaceWinner;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ public class GameController {
         List<Car> cars = setupController.initializeCars();
         int rounds = setupController.initializeRounds();
 
-        RacingGame racingGame = new RacingGame(cars);
+        RaceWinner racingGame = new RaceWinner(cars);
 
         moveController.executeRounds(rounds);
         resultController.printWinners();
