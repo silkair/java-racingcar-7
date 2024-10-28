@@ -3,10 +3,12 @@ package racingcar.model;
 public class Car {
     private final String name;
     private int position;
+    private final CarMove moveStrategy;
 
-    public Car(String name) {
+    public Car(String name, CarMove moveStrategy) {
         this.name = name;
         this.position = 0;
+        this.moveStrategy = moveStrategy;
     }
 
     public String getName() {
@@ -18,7 +20,7 @@ public class Car {
     }
 
     public void move(int randomValue) {
-        if (randomValue >= 4) { //값이 4 이상일 경우 전진
+        if (moveStrategy.canMove()) {
             position++;
         }
     }

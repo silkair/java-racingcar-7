@@ -1,6 +1,7 @@
 package racingcar.controller;
 
 import racingcar.model.Car;
+import racingcar.model.RandomMove;
 import racingcar.view.InputView;
 
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ public class GameSetupController {
         String[] carNames = InputView.getCarNames();
         List<Car> cars = new ArrayList<>();
         for (String name : carNames) {
-            cars.add(new Car(name));
+            cars.add(new Car(name, new RandomMove())); // RandomMove 인스턴스 추가
         }
         return cars;
     }
