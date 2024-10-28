@@ -24,7 +24,8 @@ public class GameController {
             OutputView.printRoundResult(racingGame.getCars());
         }
 
-        // 우승자 결정 로직 (이후 RacingGame에 추가)
-        OutputView.printWinners(racingGame.getCars()); // 예시로 전체 자동차를 출력
+        //우승자 출력
+        List<Car> winners = racingGame.determineWinners();
+        OutputView.printWinners(winners);
     }
 }
