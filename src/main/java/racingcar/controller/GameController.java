@@ -6,20 +6,19 @@ import racingcar.model.RaceWinner;
 import java.util.List;
 
 public class GameController {
-    private final GameSetupController setupController;
     private final MoveController moveController;
     private final RaceResultController resultController;
+    private final List<Car> cars;
+    private final int rounds;
 
-    public GameController(GameSetupController setupController, MoveController moveController, RaceResultController resultController) {
-        this.setupController = setupController;
+    public GameController(List<Car> cars, int rounds, MoveController moveController, RaceResultController resultController) {
+        this.cars = cars;
+        this.rounds = rounds;
         this.moveController = moveController;
         this.resultController = resultController;
     }
 
     public void start() {
-        List<Car> cars = setupController.initializeCars();
-        int rounds = setupController.initializeRounds();
-
         RaceWinner racingGame = new RaceWinner(cars);
 
         moveController.executeRounds(rounds);
